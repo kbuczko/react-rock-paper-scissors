@@ -1,0 +1,25 @@
+.figures__paper,
+.figures__scissors,
+.figures__rock {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  background: white;
+  padding: 2em;
+  border-radius: 50%;
+}
+
+.figures__paper {
+  top: -30px;
+  left: 0;
+}
+
+.figures__scissors {
+  top: -30px;
+  right: 0;
+}
+
+.figures__rock {
+  bottom: -10px;
+  left: 108px;
+}
