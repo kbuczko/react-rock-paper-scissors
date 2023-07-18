@@ -1,9 +1,18 @@
 import "./Figure.css";
 
-const Figure = ({img, cssName}) => {
+const Figure: React.FC<{
+  img: string;
+  cssName: string;
+  onPickFigure: (name: string) => void;
+}> = ({img, cssName = "", onPickFigure}) => {
   return (
-    <button className={cssName}>
-      <img src={img} alt="" />
+    <button
+      className={cssName}
+      onClick={() => {
+        onPickFigure(cssName);
+      }}
+    >
+      <img src={img} alt="Figure" />
     </button>
   );
 };

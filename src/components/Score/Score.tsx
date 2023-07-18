@@ -1,6 +1,6 @@
 import "./Score.css";
 
-const Score = () => {
+const Score: React.FC<{score: number}> = ({score}) => {
   return (
     <header className="score__header">
       <div className="score__figures">
@@ -10,7 +10,7 @@ const Score = () => {
       </div>
       <div className="score__card">
         <span className="score__card__title">Score</span>
-        <span className="score__card__points">12</span>
+        <span className="score__card__points">{score}</span>
       </div>
     </header>
   );

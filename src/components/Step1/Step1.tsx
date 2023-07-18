@@ -5,14 +5,32 @@ import rock from "../../images/icon-rock.svg";
 import "./Step1.css";
 import Figure from "../Figures/Figure";
 
-const Step1 = () => {
+const Step1: React.FC<{onPickFigure: (value: string) => void}> = ({
+  onPickFigure,
+}) => {
   return (
     <section>
       <div className="figures__wrapper">
-        <img className="figures__triangle" src={triangle} alt="" />
-        <Figure img={paper} cssName="figures__paper" />
-        <Figure img={scissors} cssName="figures__scissors" />
-        <Figure img={rock} cssName="figures__rock" />
+        <img
+          className="figures__triangle"
+          src={triangle}
+          alt="Figures background"
+        />
+        <Figure
+          img={paper}
+          cssName="figures__paper"
+          onPickFigure={onPickFigure}
+        />
+        <Figure
+          img={scissors}
+          cssName="figures__scissors"
+          onPickFigure={onPickFigure}
+        />
+        <Figure
+          img={rock}
+          cssName="figures__rock"
+          onPickFigure={onPickFigure}
+        />
       </div>
     </section>
   );
